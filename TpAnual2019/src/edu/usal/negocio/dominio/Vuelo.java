@@ -1,8 +1,9 @@
 package edu.usal.negocio.dominio;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Vuelo {
+public class Vuelo implements Serializable{
 	
 	private int numVuelo;
 	private int cantAsientos;
@@ -10,11 +11,14 @@ public class Vuelo {
 	private int aeropuertoLlegada;
 	private Date fechaHoraLlegada;
 	private Date fechaHoraSalida;
+	private String tiempoVuelo;
 	private int idAerolinea;
 	
-	public int getNumVuelo() {
+	public int getNumVuelo(){
 		return numVuelo;
+	
 	}
+	
 	public void setNumVuelo(int numVuelo) {
 		this.numVuelo = numVuelo;
 	}
@@ -54,4 +58,26 @@ public class Vuelo {
 	public void setIdAerolinea(int idAerolinea) {
 		this.idAerolinea = idAerolinea;
 	}
+	public String getTiempoVuelo() {
+		return tiempoVuelo;
+	}
+	public void setTiempoVuelo(String tiempoVuelo) {
+		this.tiempoVuelo = tiempoVuelo;
+	}
+	public Vuelo(int numVuelo, int cantAsientos, int aeropuertoSalida, int aeropuertoLlegada, Date fechaHoraLlegada,
+			Date fechaHoraSalida, String tiempoVuelo, int idAerolinea) {
+		super();
+		this.numVuelo = numVuelo;
+		this.cantAsientos = cantAsientos;
+		this.aeropuertoSalida = aeropuertoSalida;
+		this.aeropuertoLlegada = aeropuertoLlegada;
+		this.fechaHoraLlegada = fechaHoraLlegada;
+		this.fechaHoraSalida = fechaHoraSalida;
+		this.tiempoVuelo = tiempoVuelo;
+		this.idAerolinea = idAerolinea;
+	}
+	
+	public Vuelo(){}
+
+
 }
