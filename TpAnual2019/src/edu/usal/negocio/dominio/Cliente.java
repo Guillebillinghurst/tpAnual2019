@@ -4,77 +4,15 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Cliente implements Serializable{
-
-
-	private String Nombre;
-	private String Apellido;
-	private String DNI;
-	private Pasaporte Pasap;
-	private Date FechaNacimiento;
-	private PasajeroFrecuente PasajFrec;
-	private String Pais;
-	private String Provincia;
-	private String Ciudad;
-
 	
-	public Cliente(){
-	//	Pasap = new Pasaporte();
-	//	PasajFrec = new PasajeroFrecuente();
-	/*	Date d = new Date();
-		d.getTime();
-		Nombre="ag";
-		Apellido="san";
-		DNI="1";
-		FechaNacimiento=d;
-		Pais="arg";
-		Provincia="ba";
-		Ciudad="bas";
-		Pasap.setFechaEmision(d);
-		Pasap.setFechaVencimiento(d);
-		Pasap.setNumPasaporte("43");
-		Pasap.setPaisEmision("arg");
-		PasajFrec.setAerolinea("fsdf");
-		PasajFrec.setNumero("4345");*/
-	}
-	
-	public Cliente(String nombre, String apellido, String dNI, Date fechaNacimiento, String pais, String provincia, String ciudad) {
-	//	super()
-		Pasap = new Pasaporte();
-		PasajFrec = new PasajeroFrecuente();
-		Nombre = nombre;
-		Apellido = apellido;
-		DNI = dNI;
-		FechaNacimiento = fechaNacimiento;
-		Pais = pais;
-		Provincia = provincia;
-		Ciudad = ciudad;
-	}
+	String Nombre, Apellido, dni, cuit, cuil, email;
+	Date fechaNacimiento;
+	Pasaporte pasaporte = new Pasaporte();
+	Telefono telefono = new Telefono();
+	NroPasajeroFrecuente nroPasajeroFrecuente = new NroPasajeroFrecuente();
+	DireccionCompleta direccionCompleta = new DireccionCompleta();
 	
 	
-	
-	public String getPais() {
-		return Pais;
-	}
-
-	public void setPais(String pais) {
-		Pais = pais;
-	}
-
-	public String getProvincia() {
-		return Provincia;
-	}
-
-	public void setProvincia(String provincia) {
-		Provincia = provincia;
-	}
-
-	public String getCiudad() {
-		return Ciudad;
-	}
-
-	public void setCiudad(String ciudad) {
-		Ciudad = ciudad;
-	}
 	
 	public String getNombre() {
 		return Nombre;
@@ -82,37 +20,87 @@ public class Cliente implements Serializable{
 	public void setNombre(String nombre) {
 		Nombre = nombre;
 	}
-	public Pasaporte getPasap() {
-		return Pasap;
-	}
-	public void setPasap(Pasaporte pasap) {
-		Pasap = pasap;
-	}
-	public String getDNI() {
-		return DNI;
-	}
-	public void setDNI(String dNI) {
-		DNI = dNI;
-	}
-	public Date getFechaNacimiento() {
-		return FechaNacimiento;
-	}
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		FechaNacimiento = fechaNacimiento;
-	}
-	public PasajeroFrecuente getPasajFrec() {
-		return PasajFrec;
-	}
-	public void setPasajFrec(PasajeroFrecuente pasajFrec) {
-		PasajFrec = pasajFrec;
-	}
-
 	public String getApellido() {
 		return Apellido;
 	}
-
 	public void setApellido(String apellido) {
 		Apellido = apellido;
 	}
+	public String getDni() {
+		return dni;
+	}
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+	public String getcuit() {
+		return cuit;
+	}
+	public void setcuit(String cuit) {
+		this.cuit = cuit;
+	}
+	public String getcuil() {
+		return cuil;
+	}
+	public void setcuil(String cuil) {
+		this.cuil = cuil;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	public Pasaporte getPasaporte() {
+		return pasaporte;
+	}
+	public void setPasaporte(Pasaporte pasaporte) {
+		this.pasaporte = pasaporte;
+	}
+	public Telefono getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(Telefono telefono) {
+		this.telefono = telefono;
+		
+	}
+	public NroPasajeroFrecuente getNroPasajeroFrecuente() {
+		return nroPasajeroFrecuente;
+	}
+	public void setNroPasajeroFrecuente(NroPasajeroFrecuente nroPasajeroFrecuente) {
+		this.nroPasajeroFrecuente = nroPasajeroFrecuente;
+	}
+	public DireccionCompleta getDireccionCompleta() {
+		return direccionCompleta;
+	}
+	public void setDireccionCompleta(DireccionCompleta direccionCompleta) {
+		this.direccionCompleta = direccionCompleta;
+	}
+	public Cliente(String nombre, String apellido, String dni, String cuit, String cuil, String email,
+			Date fechaNacimiento, Pasaporte pasaporte, Telefono telefono, 
+			NroPasajeroFrecuente nroPasajeroFrecuente, DireccionCompleta direccionCompleta) 
+	{
+		super();
+		Nombre = nombre;
+		Apellido = apellido;
+		this.dni = dni;
+		this.cuit = cuit;
+		this.cuil = cuil;
+		this.email = email;
+		this.fechaNacimiento = fechaNacimiento;
+		this.pasaporte = pasaporte;
+		this.telefono = telefono;
+		this.nroPasajeroFrecuente = nroPasajeroFrecuente;
+		this.direccionCompleta = direccionCompleta;
+	}
+	
+	public Cliente() {
+		
+	}	
 	
 }

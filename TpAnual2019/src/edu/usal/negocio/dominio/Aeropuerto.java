@@ -1,35 +1,52 @@
 package edu.usal.negocio.dominio;
 
 public class Aeropuerto {
-	private int identificacionAero;
-	private String ciudad;
-	private String provincia;
-	private String pais;
 	
-	public int getIdentificacionAero() {
-		return identificacionAero;
+	String idAeropuerto, cuidad, provincia, pais;
+
+	public String getIdAeropuerto() {
+		return idAeropuerto;
 	}
-	public void setIdentificacionAero(int identificacionAero) {
-		this.identificacionAero = identificacionAero;
+
+	public void setIdAeropuerto(String idAeropuerto) {
+		this.idAeropuerto = idAeropuerto;
 	}
-	public String getCiudad() {
-		return ciudad;
+
+	public String getCuidad() {
+		return cuidad;
 	}
-	public void setCiudad(String ciudad) {
-		this.ciudad = ciudad;
+
+	public void setCuidad(String cuidad) {
+		this.cuidad = cuidad;
 	}
+
 	public String getProvincia() {
 		return provincia;
 	}
+
 	public void setProvincia(String provincia) {
 		this.provincia = provincia;
 	}
+
 	public String getPais() {
 		return pais;
 	}
+
 	public void setPais(String pais) {
 		this.pais = pais;
 	}
+
+	public Aeropuerto(String idAeropuerto, String cuidad, String provincia, String pais) {
+		super();
+		this.idAeropuerto = idAeropuerto;
+		this.cuidad = cuidad;
+		this.provincia = provincia;
+		this.pais = pais;
+	}
 	
+	public Aeropuerto() {
+		
+	}
 	
+
 }
