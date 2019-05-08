@@ -1,8 +1,9 @@
 package edu.usal.negocio.dominio;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Cliente {
+public class Cliente implements Serializable{
 
 
 	private String Nombre;
@@ -17,8 +18,8 @@ public class Cliente {
 
 	
 	public Cliente(){
-		Pasap = new Pasaporte();
-		PasajFrec = new PasajeroFrecuente();
+	//	Pasap = new Pasaporte();
+	//	PasajFrec = new PasajeroFrecuente();
 	/*	Date d = new Date();
 		d.getTime();
 		Nombre="ag";

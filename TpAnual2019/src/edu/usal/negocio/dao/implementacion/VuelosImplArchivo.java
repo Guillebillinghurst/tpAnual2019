@@ -80,11 +80,5 @@ public class VuelosImplArchivo implements VuelosDAO{
 		// TODO Auto-generated method stub
 		return null;
 	}
-	@Override
-	public void AgregarVuelo(Vuelo vuelo) throws IOException {
-		// TODO Auto-generated method stub
-		
-	}
-	
 
 }
