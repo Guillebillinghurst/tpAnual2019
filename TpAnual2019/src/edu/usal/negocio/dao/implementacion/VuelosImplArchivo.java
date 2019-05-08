@@ -14,7 +14,7 @@ import edu.usal.negocio.dao.interfaces.VuelosDAO;
 import edu.usal.negocio.dominio.Vuelo;
 
 
-public class VuelosImplArchivo implements VuelosDAO{
+public class VuelosDAOImplArchivo implements VuelosDAO{
 
 	private File archivo;
 	private FileWriter archivoWritter;
