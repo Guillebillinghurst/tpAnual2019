@@ -1,0 +1,139 @@
+Air Berlin;0
+Aeroflot;1
+Adria Airways;2
+Niki;3
+Aerolíneas Argentinas;4
+Aegean Airlines;5
+American Airlines;6
+Austral Líneas Aéreas;7
+Olympic Air;8
+American Eagle;9
+Aeromexico;10
+Air Canada;11
+US Airways;12
+Aeroméxico Connect;13
+Air Canada Express;14
+US Airways Express;15
+Air Europa;16
+Air Canada Rouge;17
+US Airways Shuttle;18
+Air France;19
+Air China;20
+British Airways;21
+Alitalia;22
+Dalian Airlines;23
+BA CityFlyer;24
+China Airlines;25
+Air India;26
+British Airways Limited;27
+Mandarin Airlines;28
+Air India Regional;29
+Comair;30
+China Eastern Airlines;31
+Air New Zealand;32
+OpenSkies;33
+Shanghai Airlines;34
+Air New Zealand Link;35
+Sun;36
+Air;37
+China Southern Airlines;38
+All Nippon Airways;39
+Cathay Pacific;40
+Czech Airlines;41
+Asiana Airlines;42
+Dragonair;43
+Delta Air Lines;44
+Austrian Airlines;45
+Finnair;46
+Delta Connection;47
+Avianca;48
+Nordic Regional Airlines;49
+Delta Shuttle;50
+Avianca Brazil;51
+Iberia;52
+Garuda Indonesia;53
+Avianca Costa Rica;54
+Air Nostrum;55
+Kenya Airways;56
+Avianca Ecuador;57
+Iberia Express;58
+KLM;59
+Avianca El Salvador;60
+Iberia Regional;61
+KLM Cityhopper;62
+Avianca Guatemala;63
+Japan Airlines;64
+Korean Air;65
+Avianca Honduras;66
+J;67
+Air;68
+Middle East Airlines;69
+Avianca Nicaragua;70
+Japan Transocean Air;71
+Saudia;72
+Avianca Peru;73
+LAN Airlines;74
+TAROM;75
+Brussels Airlines;76
+LAN Argentina;77
+Vietnam Airlines;78
+Copa Airlines;79
+LAN Ecuador;80
+Xiamen Airlines;81
+Copa Airlines Colombia;82
+LAN Express;83
+Croatia Airlines;84
+LAN Peru;85
+EgyptAir;86
+LAN Colombia;87
+Air Madagascar;88
+EgyptAir Express;89
+Malaysia Airlines;90
+Air Mauritius;91
+Air Sinai;92
+Qantas;93
+Gol Transportes Aéreos;94
+Ethiopian Airlines;95
+Jetconnect;96
+Hunnu Air;97
+EVA Air;98
+QantasLink;99
+Uzbekistan Airways;100
+Uni Air;101
+Qatar Airways;102
+Virgin Atlantic;103
+LOT Polish Airlines;104
+Royal Jordanian;105
+Lufthansa;106
+S7 Airlines;107
+Air Dolomiti;108
+Globus Airlines;109
+Lufthansa CityLine;110
+SriLankan Airlines;111
+Lufthansa Regional;112
+TAM Airlines;113
+Scandinavian Airlines;114
+Blue1;115
+Shenzhen Airlines;116
+Aer Lingus;117
+Singapore Airlines;118
+Air Tahiti Nui;119
+South African Airways;120
+Interjet;121
+Airlink;122
+Royal Air Maroc;123
+Mango;124
+TAM Paraguay;125
+South African Express;126
+SWISS International Air Lines;127
+Edelweiss Air;128
+Swiss Global Air Lines;129
+TAP Portugal;130
+PGA Express;131
+Portugalia;132
+Thai Airways International;133
+Turkish Airlines;134
+Anadolu Jet;135
+Turkey Sun Express;136
+United Airlines;137
+United Express;138
