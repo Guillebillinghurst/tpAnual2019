@@ -1,0 +1,3 @@
+oneworld;1
+staralliance;2
+skyteam;3
