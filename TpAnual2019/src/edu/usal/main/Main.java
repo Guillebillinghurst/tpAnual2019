@@ -32,7 +32,7 @@ vuelosDao.AgregarVuelo();
 	//	vuelosDao.GetAll();
 		
 		
-		Cliente cliente1 = new Cliente();
+		/*Cliente cliente1 = new Cliente();
 		cliente1.setApellido("Villanueva");
 		cliente1.setNombre("Francisco");
 		
@@ -51,7 +51,7 @@ vuelosDao.AgregarVuelo();
 			e.printStackTrace();
 		}
 
-		
+		*/
 		
 	}
 }

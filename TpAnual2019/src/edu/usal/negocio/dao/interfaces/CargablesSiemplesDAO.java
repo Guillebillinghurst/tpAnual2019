@@ -1,5 +1,9 @@
 package edu.usal.negocio.dao.interfaces;
 
-public interface CargablesSiemplesDAO {
+import java.util.ArrayList;
 
+import edu.usal.negocio.dominio.CargablesSimples;
+
+public interface CargablesSiemplesDAO {
+	public ArrayList<CargablesSimples> cargar(String path);
 }
