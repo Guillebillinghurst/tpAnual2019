@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class Cliente implements Serializable{
 	
+	int id;
 	String Nombre, Apellido, dni, cuit, cuil, email;
 	Date fechaNacimiento;
 	Pasaporte pasaporte = new Pasaporte();

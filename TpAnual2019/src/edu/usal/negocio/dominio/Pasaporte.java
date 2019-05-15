@@ -5,8 +5,10 @@ import java.util.Date;
 
 public class Pasaporte implements Serializable{
 	
-	String NroPasaporte, paisEmision, autoridadEmision;
-	Date fechaEmision, fechaVencimiento;
+	private int id;
+	private String NroPasaporte, paisEmision, autoridadEmision;
+	private Date fechaEmision, fechaVencimiento;
+	
 	public String getNroPasaporte() {
 		return NroPasaporte;
 	}

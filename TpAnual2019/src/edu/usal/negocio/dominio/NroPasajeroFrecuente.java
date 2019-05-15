@@ -4,7 +4,8 @@ import java.io.Serializable;
 
 public class NroPasajeroFrecuente implements Serializable {
 	
-	String Alianza, Aerolinea, Numero,Categoria;
+	private int id;
+	private String Alianza, Aerolinea, Numero,Categoria;
 
 	public String getAlianza() {
 		return Alianza;

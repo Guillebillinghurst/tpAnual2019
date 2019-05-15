@@ -4,7 +4,9 @@ import java.io.Serializable;
 
 public class Telefono implements Serializable {
 	
-	String nroPersonal, nroCelular, nroLaboral;
+	private String nroPersonal, nroCelular, nroLaboral;
+	private int id;
+	
 
 	public String getNroPersonal() {
 		return nroPersonal;
