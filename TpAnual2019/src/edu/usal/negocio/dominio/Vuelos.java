@@ -4,12 +4,19 @@ import java.util.Date;
 
 public class Vuelos {
 
-	String nroVuelo;
-	int cantAsientos;
-	Aeropuerto aeropuertoSalida = new Aeropuerto();
-	Aeropuerto aeropuertoLlegada = new Aeropuerto();
-	Date fechaSalida, horaSalida, fechaLlegada, horaLlegada;
-	String tiempoVuelo;
+	private String nroVuelo;
+	private int cantAsientos;
+	private Aeropuerto aeropuertoSalida = new Aeropuerto();
+	private Aeropuerto aeropuertoLlegada = new Aeropuerto();
+	private Date fechaSalida, horaSalida, fechaLlegada, horaLlegada;
+	private String tiempoVuelo;
+	private int id;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getNroVuelo() {
 		return nroVuelo;
 	}
