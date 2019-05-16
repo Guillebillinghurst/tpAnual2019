@@ -2,24 +2,38 @@ package edu.usal.negocio.dominio;
 
 public class CargablesSimples {
 	private String nombre;
-	private String  id;
+	private int  id;
 	public String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
+	}
+
+
+	@Override
+	public String toString() {
+		return "CargablesSimples [nombre=" + nombre + ", id=" + id + "]";
+	}
+	public CargablesSimples(String nombre, int id) {
+		super();
+		this.nombre = nombre;
+		this.id = id;
+	}
+	
+	public CargablesSimples() {
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + id;
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
 		return result;
 	}
@@ -32,10 +46,7 @@ public class CargablesSimples {
 		if (getClass() != obj.getClass())
 			return false;
 		CargablesSimples other = (CargablesSimples) obj;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
+		if (id != other.id)
 			return false;
 		if (nombre == null) {
 			if (other.nombre != null)
@@ -44,16 +55,5 @@ public class CargablesSimples {
 			return false;
 		return true;
 	}
-	@Override
-	public String toString() {
-		return "CargablesSimples [nombre=" + nombre + ", id=" + id + "]";
-	}
-	public CargablesSimples(String nombre, String id) {
-		super();
-		this.nombre = nombre;
-		this.id = id;
-	}
 	
-	public CargablesSimples() {
-	}
 }
