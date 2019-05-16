@@ -44,9 +44,7 @@ public class Aeropuerto {
 		this.pais = pais;
 	}
 	
-	public Aeropuerto() {
-		
-	}
+	public Aeropuerto() {}
 	
 
 }

@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class LineasAereas {
 	
+	private int id;
 	private String Nombre;
-	private String id;
 	private ArrayList<Vuelos> vuelos;
 	private CargablesSimples alianza;
+	
 	public String getNombre() {
 		return Nombre;
 	}
