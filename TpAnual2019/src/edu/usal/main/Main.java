@@ -5,33 +5,30 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.List;
-
 import edu.usal.negocio.dao.factory.ClienteFactory;
 import edu.usal.negocio.dao.factory.VuelosFactory;
 import edu.usal.negocio.dao.interfaces.ClienteDAO;
 import edu.usal.negocio.dao.interfaces.VuelosDAO;
 import edu.usal.negocio.dominio.Cliente;
+import edu.usal.negocio.dominio.Vuelos;
 
 
 public class Main {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-//		VuelosDAO vuelosDao = VuelosFactory.GetImplementation("Serializacion");
-/*		
-		Vuelo vuelos = new Vuelo();
-		vuelos.setNumVuelo(1);
+	
+		VuelosDAO vuelosDao = VuelosFactory.GetImplementation("archivo");	
+		Vuelos vuelos = new Vuelos();
+		vuelos.setNroVuelo(1);
 		vuelos.setCantAsientos(25);
 
-		vuelosDao.AgregarVuelo(vuelos);
--Anda String-
+		//vuelosDao.AgregarVuelo(vuelos);
+// -Anda String-
 vuelosDao.AgregarVuelo();
-*/
 
-		
-		//vuelosDao.AgregarVuelo();
-	//	vuelosDao.GetAll();
-		
-		
+	//vuelosDao.AgregarVuelo();
+	//vuelosDao.GetAll();
+
 		/*Cliente cliente1 = new Cliente();
 		cliente1.setApellido("Villanueva");
 		cliente1.setNombre("Francisco");
@@ -50,11 +47,8 @@ vuelosDao.AgregarVuelo();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		*/
+		
 		
 	}
 }
-
-
-

@@ -11,7 +11,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import edu.usal.negocio.dao.interfaces.VuelosDAO;
-import edu.usal.negocio.dominio.Vuelo;
+import edu.usal.negocio.dominio.Aeropuerto;
+import edu.usal.negocio.dominio.Vuelos;
 
 
 public class VuelosDAOImplArchivo implements VuelosDAO{
@@ -29,54 +30,51 @@ public class VuelosDAOImplArchivo implements VuelosDAO{
 			FileWriter w = new FileWriter(archivo,true);
 			BufferedWriter bw = new BufferedWriter(w);
 			PrintWriter wr = new PrintWriter(bw);				
-		//pideVuelo();
-		//String Vuelo = vuelo.getNumVuelo() + ";" + vuelo.getCantAsientos();
+	
 		String Vuelo = pideVuelo();
 		System.out.println(Vuelo);
 		wr.write(Vuelo);
 		wr.close();
-		
-
+	
 	}
+	
 	private String pideVuelo(){
 		 
 	        Scanner scn = new Scanner (System.in);
-	        Vuelo vuelos = new Vuelo(); 
-	        System.out.println("Nro Vuelo:");
-	        vuelos.setNumVuelo(scn.nextInt());
-	        System.out.println("Cant Asientos:");
+	        Vuelos vuelos = new Vuelos(); 
+	        vuelos.setNroVuelo(scn.nextInt());
 	        vuelos.setCantAsientos(scn.nextInt());
-	        System.out.println("Aer Llegada:");
-	        vuelos.setAeropuertoLlegada(scn.nextInt());
-	        System.out.println("Aer Salida:");
-	        vuelos.setAeropuertoSalida(scn.nextInt());
-	        System.out.println("FechaHora Llegada:");
-	        //    vuelos.setFechaHoraLlegada(scn.());
-	        System.out.println("FechaHora Salida:");
-	    //    vuelos.setFechaHoraSalida(scn.);
 	        scn.nextLine();
-	        System.out.println("Tiempo Vuelo:");
+	        
+	        Aeropuerto aeropLlegada = new Aeropuerto();
+	        Aeropuerto aeropSalida = new Aeropuerto();
+	        
+	        aeropSalida.setIdAeropuerto(scn.nextLine());
+	        aeropLlegada.setIdAeropuerto(scn.nextLine());
+	        
+	        vuelos.setAeropuertoLlegada(aeropLlegada);
+	        vuelos.setAeropuertoSalida(aeropSalida);
+	        
+	        scn.nextLine();
 	        vuelos.setTiempoVuelo(scn.nextLine());
-	        System.out.println("ID Aereolinea:");
-	        vuelos.setIdAerolinea(scn.nextInt());
+	        vuelos.setIdAereolinea(scn.nextInt());
+		
+	        return vuelos.getNroVuelo() + "NroVuelo;" + vuelos.getCantAsientos()+ "CantAsientos;" + aeropLlegada.getIdAeropuerto() + "aeropLlegada;" + aeropSalida.getIdAeropuerto() + "aeropSalida;" +vuelos.getTiempoVuelo() + "TiempoVuelo;" + vuelos.getIdAereolinea()+"IdAereolinea;\n" ;
 
-		return vuelos.getNumVuelo() + ";" + vuelos.getCantAsientos()+ ";" + vuelos.getAeropuertoLlegada()+ ";" + vuelos.getAeropuertoSalida() + ";" +vuelos.getTiempoVuelo() + ";" + vuelos.getIdAerolinea()+";\n" ;
-		
-		
+		//return vuelos.getNroVuelo() + ";" + vuelos.getCantAsientos()+ ";" + aeropLlegada.getIdAeropuerto() + ";" + aeropSalida.getIdAeropuerto() + ";" +vuelos.getTiempoVuelo() + ";" + vuelos.getIdAereolinea()+";\n" ;
+
 	}
 
-	public void EliminarVuelo(Vuelo vuelo) {
-		
+	public void EliminarVuelo(Vuelos vuelo) {
 		
 	}
 
 	@Override
-	public void ModificarVuelo(Vuelo vuelo) {
-		// TODO Auto-generated method stub
+	public void ModificarVuelo(Vuelos vuelo) {
 		
 	}
 
-	public List<Vuelo> GetAll() throws IOException {
+	public List<Vuelos> GetAll() throws IOException {
 		// TODO Auto-generated method stub
 		return null;
 	}

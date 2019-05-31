@@ -4,24 +4,25 @@ import java.util.Date;
 
 public class Vuelos {
 
-	private String nroVuelo;
+	private int nroVuelo;
 	private int cantAsientos;
 	private Aeropuerto aeropuertoSalida = new Aeropuerto();
 	private Aeropuerto aeropuertoLlegada = new Aeropuerto();
 	private Date fechaSalida, horaSalida, fechaLlegada, horaLlegada;
 	private String tiempoVuelo;
 	private int id;
+	private int idAereolinea;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getNroVuelo() {
+	public int getNroVuelo() {
 		return nroVuelo;
 	}
-	public void setNroVuelo(String nroVuelo) {
-		this.nroVuelo = nroVuelo;
+	public void setNroVuelo(int i) {
+		this.nroVuelo = i;
 	}
 	public int getCantAsientos() {
 		return cantAsientos;
@@ -71,8 +72,8 @@ public class Vuelos {
 	public void setTiempoVuelo(String tiempoVuelo) {
 		this.tiempoVuelo = tiempoVuelo;
 	}
-	public Vuelos(String nroVuelo, int cantAsientos, Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada,
-			Date fechaSalida, Date horaSalida, Date fechaLlegada, Date horaLlegada, String tiempoVuelo) {
+	public Vuelos(int nroVuelo, int cantAsientos, Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada,
+			Date fechaSalida, Date horaSalida, Date fechaLlegada, Date horaLlegada, String tiempoVuelo, int idAereolinea) {
 		super();
 		this.nroVuelo = nroVuelo;
 		this.cantAsientos = cantAsientos;
@@ -83,8 +84,14 @@ public class Vuelos {
 		this.fechaLlegada = fechaLlegada;
 		this.horaLlegada = horaLlegada;
 		this.tiempoVuelo = tiempoVuelo;
+		this.idAereolinea = idAereolinea;
 	}
 	
-	public Vuelos() {
+	public Vuelos() {	}
+	public int getIdAereolinea() {
+		return idAereolinea;
+	}
+	public void setIdAereolinea(int idAereolinea) {
+		this.idAereolinea = idAereolinea;
 	}	
 }
