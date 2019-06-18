@@ -18,16 +18,16 @@ public class Main {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 	
 		VuelosDAO vuelosDao = VuelosFactory.GetImplementation("archivo");	
-		Vuelos vuelos = new Vuelos();
-		vuelos.setNroVuelo(1);
-		vuelos.setCantAsientos(25);
+//		Vuelos vuelos = new Vuelos();
+//		vuelos.setNroVuelo(1);
+//		vuelos.setCantAsientos(25);
 
-		//vuelosDao.AgregarVuelo(vuelos);
 // -Anda String-
-vuelosDao.AgregarVuelo();
-
-	//vuelosDao.AgregarVuelo();
-	//vuelosDao.GetAll();
+//vuelosDao.EliminarVuelo();
+//vuelosDao.AgregarVuelo();
+//vuelosDao.GetAll();
+//vuelosDao.ModificarVuelo();
+//vuelosDao.probado();
 
 		/*Cliente cliente1 = new Cliente();
 		cliente1.setApellido("Villanueva");
