@@ -1,6 +1,7 @@
 package edu.usal.negocio.dominio;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Cliente implements Serializable{
@@ -101,6 +102,22 @@ public class Cliente implements Serializable{
 	}
 	
 	public Cliente() {
+		
+	}
+	public ArrayList<Cliente> getVuelos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public String getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public Cliente getAlianza() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public void setAlianza(CargablesSimples mostrar) {
+		// TODO Auto-generated method stub
 		
 	}	
 	
