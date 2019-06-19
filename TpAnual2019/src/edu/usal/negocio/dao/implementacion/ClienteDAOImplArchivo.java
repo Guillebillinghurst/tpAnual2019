@@ -49,6 +49,14 @@ public class ClienteDAOImplArchivo implements ClienteDAO {
 		Cliente cliente = new Cliente();
 		cliente.setApellido(atributos[0]);
 		cliente.setNombre(atributos[1]);
+		cliente.setDni(atributos[2]);
+		cliente.setFechaNacimiento(atributos[3]);
+		cliente.getDireccionCompleta(atributos[4]);
+		
+		
+		
+		
+		
 		return cliente;
 		
 	}
