@@ -11,7 +11,7 @@ public class Vuelos {
 	private Date fechaSalida, horaSalida, fechaLlegada, horaLlegada;
 	private String tiempoVuelo;
 	private int id;
-	private int idAereolinea;
+	private LineasAereas Aerolinea;
 	public int getId() {
 		return id;
 	}
@@ -51,6 +51,12 @@ public class Vuelos {
 	public Date getHoraSalida() {
 		return horaSalida;
 	}
+	public LineasAereas getAerolinea() {
+		return Aerolinea;
+	}
+	public void setAerolinea(LineasAereas aerolinea) {
+		Aerolinea = aerolinea;
+	}
 	public void setHoraSalida(Date horaSalida) {
 		this.horaSalida = horaSalida;
 	}
@@ -73,7 +79,7 @@ public class Vuelos {
 		this.tiempoVuelo = tiempoVuelo;
 	}
 	public Vuelos(int nroVuelo, int cantAsientos, Aeropuerto aeropuertoSalida, Aeropuerto aeropuertoLlegada,
-			Date fechaSalida, Date horaSalida, Date fechaLlegada, Date horaLlegada, String tiempoVuelo, int idAereolinea) {
+			Date fechaSalida, Date horaSalida, Date fechaLlegada, Date horaLlegada, String tiempoVuelo, LineasAereas Aerolinea) {
 		super();
 		this.nroVuelo = nroVuelo;
 		this.cantAsientos = cantAsientos;
@@ -84,14 +90,8 @@ public class Vuelos {
 		this.fechaLlegada = fechaLlegada;
 		this.horaLlegada = horaLlegada;
 		this.tiempoVuelo = tiempoVuelo;
-		this.idAereolinea = idAereolinea;
+		this.Aerolinea = Aerolinea;
 	}
 	
 	public Vuelos() {	}
-	public int getIdAereolinea() {
-		return idAereolinea;
-	}
-	public void setIdAereolinea(int idAereolinea) {
-		this.idAereolinea = idAereolinea;
-	}	
 }

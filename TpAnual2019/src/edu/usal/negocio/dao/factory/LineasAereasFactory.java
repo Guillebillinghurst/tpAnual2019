@@ -5,7 +5,7 @@ import edu.usal.negocio.dao.implementacion.LineasAereasDAOimplBD;
 import edu.usal.negocio.dao.interfaces.LineasAereasDAO;
 
 public class LineasAereasFactory {
-	public LineasAereasDAO getDAO(String source) {
+	public static LineasAereasDAO getDAO(String source) {
 		if(source.equals("archivo") == true) {
 			return new LineasAereasDAOimplArchivo();
 		}

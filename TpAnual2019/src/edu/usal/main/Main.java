@@ -23,6 +23,10 @@ public class Main {
 //		vuelos.setCantAsientos(25);
 
 // -Anda String-
+		int id;
+		id =0;
+		
+vuelosDao.BuscarVuelo(id);
 //vuelosDao.EliminarVuelo();
 //vuelosDao.AgregarVuelo();
 //vuelosDao.GetAll();
