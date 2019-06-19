@@ -168,7 +168,8 @@ public class VentasDAOImplArchivo implements VentasDAO{
 	   	ventas.add(venta);
 		}		
 		return ventas;
-	}	
+	}
+
 }
 
 

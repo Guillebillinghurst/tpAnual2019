@@ -124,7 +124,6 @@ public class VuelosDAOImplArchivo implements VuelosDAO{
 	        
 	        if (vuelo1.getNroVuelo()!=id) {
 	        	vuelos.add(vuelo1);
-	        	System.out.println(vuelo1.getNroVuelo());
 		    }else{
 		    	vuelo1=vuelo;
 		    	vuelos.add(vuelo1);

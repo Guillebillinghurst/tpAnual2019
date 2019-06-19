@@ -46,7 +46,7 @@ public class CargablesSimplesDAOimplArchivo implements CargablesSiemplesDAO{
 		return lista;
 	}
 	
-	public CargablesSimples mostrar(int id,String path) {
+	public CargablesSimples mostrar(String path, int id) {
 		CargablesSiemplesDAO cd = CargablesSimplesFactory.getDAOCS("archivo");
 		ArrayList<CargablesSimples> lista = cd.cargar(path);
 		CargablesSimples cs = new CargablesSimples();
