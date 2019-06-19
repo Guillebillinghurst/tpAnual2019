@@ -1,0 +1,9 @@
+AAE;Annaba;Algeria;Les Salines 
+AAL;Aalborg;Denmark;Aalborg 
+AAR;Aarhus;Denmark;Tirstrup 
+ABE;Allentown;PA;USA 
+ABI;Abilene;TX;USA 
+ABJ;Abidjan;Cote Divoire;Port Bouet 
+ABL;Ambler;AK;USA 
+ABM;Bamaga;Queensland;Australia 
+ABQ;Albuquerque;NM;USA 

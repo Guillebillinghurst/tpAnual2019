@@ -14,8 +14,10 @@ import java.util.Scanner;
 
 import javax.sound.sampled.Line;
 
+import edu.usal.negocio.dao.factory.AeropuertosFactory;
 import edu.usal.negocio.dao.factory.LineasAereasFactory;
 import edu.usal.negocio.dao.factory.VuelosFactory;
+import edu.usal.negocio.dao.interfaces.AeropuertosDAO;
 import edu.usal.negocio.dao.interfaces.LineasAereasDAO;
 import edu.usal.negocio.dao.interfaces.VuelosDAO;
 import edu.usal.negocio.dominio.Aeropuerto;
@@ -139,15 +141,13 @@ public class VuelosDAOImplArchivo implements VuelosDAO{
 	wr.close();	
 	
 	}
-
 	public List<Vuelos> GetAll() throws IOException {
 		File archivo = new File("Vuelos1.txt");
 		FileReader fr = new FileReader(archivo);
 		BufferedReader br = new BufferedReader(fr);
 		String linea = "";
 		String lineas = "";
-        Scanner scn = new Scanner (System.in);
-
+    
         while((linea= br.readLine()) != null) {
 			lineas = lineas + linea + "_";
 			}
@@ -163,23 +163,18 @@ public class VuelosDAOImplArchivo implements VuelosDAO{
 			vuelo1.setNroVuelo(Integer.parseInt(atrib[0]));
 			vuelo1.setCantAsientos(Integer.parseInt(atrib[1]));
 			
-	        Aeropuerto aeropLlegada = new Aeropuerto();
-	        Aeropuerto aeropSalida = new Aeropuerto();
-	        
-	        aeropLlegada.setIdAeropuerto(atrib[2]);
-	        vuelo1.setAeropuertoLlegada(aeropLlegada);
-	        aeropSalida.setIdAeropuerto(atrib[3]);
-	        vuelo1.setAeropuertoSalida(aeropSalida);
+			AeropuertosDAO aeropuerto = AeropuertosFactory.GetImplementation("archivo");
+			LineasAereasDAO lineasaereas = LineasAereasFactory.getDAO("archivo");
+	           
+	        vuelo1.setAeropuertoLlegada(aeropuerto.BuscarAeropuerto(atrib[2]));
+	        vuelo1.setAeropuertoSalida(aeropuerto.BuscarAeropuerto(atrib[3]));
 	        vuelo1.setTiempoVuelo(atrib[4]);
-	        vuelo1.setIdAereolinea(Integer.parseInt(atrib[5]));
-	        vuelos.add(vuelo1);
+	        vuelo1.setAerolinea(lineasaereas.consulta(Integer.parseInt(atrib[5])));
+			vuelos.add(vuelo1);
 		}	
-		
-		for(int x=0;x<vuelos.size();x++) {
-			System.out.println (vuelos.get(x).getNroVuelo() + ";" + vuelos.get(x).getCantAsientos()+ ";" + vuelos.get(x).getAeropuertoLlegada().getIdAeropuerto() + ";" + vuelos.get(x).getAeropuertoSalida().getIdAeropuerto()+ ";" +vuelos.get(x).getTiempoVuelo() + ";" + vuelos.get(x).getIdAereolinea()+";\n" );
-		}	
-		return null;
+		return vuelos;
 	}
+	
 	public Vuelos BuscarVuelo(int id) throws IOException {
 			File archivo = new File("Vuelos1.txt");
 			FileReader fr = new FileReader(archivo);
@@ -189,9 +184,10 @@ public class VuelosDAOImplArchivo implements VuelosDAO{
 	        
 			while((linea= br.readLine()) != null) {
 				lineas = lineas + linea + "_";
-				}
+			}
 			
 			String[] lineas1 = lineas.split("_");
+			ArrayList<Vuelos> vuelos = new ArrayList();
 
 			for(int i = 0; i < lineas1.length; i++) {
 				Vuelos vuelo1 = new Vuelos();
@@ -200,29 +196,24 @@ public class VuelosDAOImplArchivo implements VuelosDAO{
 				vuelo1.setNroVuelo(Integer.parseInt(atrib[0]));
 				vuelo1.setCantAsientos(Integer.parseInt(atrib[1]));
 				
-		        Aeropuerto aeropLlegada = new Aeropuerto();
-		        Aeropuerto aeropSalida = new Aeropuerto();
+		        AeropuertosDAO aeropuerto = AeropuertosFactory.GetImplementation("archivo");
+		        LineasAereasDAO lineasaereas = LineasAereasFactory.getDAO("archivo");
 		        
-		        aeropLlegada.setIdAeropuerto(atrib[2]);
-		        vuelo1.setAeropuertoLlegada(aeropLlegada);
-		        aeropSalida.setIdAeropuerto(atrib[3]);
-		        vuelo1.setAeropuertoSalida(aeropSalida);
+		        vuelo1.setAeropuertoLlegada(aeropuerto.BuscarAeropuerto(atrib[2]));
+		        vuelo1.setAeropuertoSalida(aeropuerto.BuscarAeropuerto(atrib[3]));
 		        vuelo1.setTiempoVuelo(atrib[4]);
-		        LineasAereas aerolinea = new LineasAereas();
-		        //LineasAereasDAOimplArchivo aerolineadao = new LineasAereasDAOimplArchivo();
-				LineasAereasDAO lineasaereas = LineasAereasFactory.getDAO(source)
-						
-						
-		        vuelo1.setAerolinea(aerolinea);
-		        aerolinea.setId((atrib[5]));
-		        if (vuelo1.getNroVuelo()==id) {
-		        	return vuelo1;
-		        }
+		        vuelo1.setAerolinea(lineasaereas.consulta(Integer.parseInt(atrib[5])));
+		        vuelos.add(vuelo1);
 			}
-		return null;
+			for (int x = 0; x < vuelos.size(); x++){
+				if (vuelos.get(x).getId()==id) {
+			        	return vuelos.get(x);
+			        }
+			}
+			return null;
 	}
 
-	
+	/*
 	private Vuelos pideVueloModificado(int vueloamodifcar){
 		 
         Scanner scn1 = new Scanner (System.in);
@@ -243,7 +234,8 @@ public class VuelosDAOImplArchivo implements VuelosDAO{
         scn1.close();
         return vuelos;
         }
-	private String pideVuelo(){
+	*/
+	/*private String pideVuelo(){
 		 
         Scanner scn = new Scanner (System.in);
         Vuelos vuelos = new Vuelos(); 
@@ -265,6 +257,6 @@ public class VuelosDAOImplArchivo implements VuelosDAO{
         return vuelos.getNroVuelo() + ";" + vuelos.getCantAsientos()+ ";" + aeropLlegada.getIdAeropuerto() + ";" + aeropSalida.getIdAeropuerto() + ";" +vuelos.getTiempoVuelo() + ";" + vuelos.getIdAereolinea()+";\n" ;
 
 }
-
+*/
 	
 }
