@@ -15,7 +15,7 @@ import edu.usal.negocio.dao.interfaces.VuelosDAO;
 import edu.usal.negocio.dominio.Cliente;
 import edu.usal.negocio.dominio.Vuelos;
 
-public class ClienteDAOimplArchivo2 {
+public class ClienteDAOimplArchivo {
 	
 	public boolean alta (Cliente cliente) {
 		ArrayList<Cliente> cl = new ArrayList();
